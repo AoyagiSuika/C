@@ -18,7 +18,9 @@
 #include <time.h>
 
 int main() {
-  const int MAX = 100, MIN = 1;
+  const int MIN = 1;
+  int max = 100;
+  int dif = 1;
   int mod = 1;
   int con = 1;
   int rep = 0;
@@ -26,23 +28,45 @@ int main() {
   int i = 0;
 
   srand(time(NULL));
+
   while (con != 2) {
+  printf("Veuillez choisir un niveau de difficulté :\n");
+  printf("1. Entre 1 et 100\n");
+  printf("2. Entre 1 et 1000\n");
+  printf("3. Entre 1 et 10000\n");
+  scanf("%d", &dif);
+    switch(dif) {
+      case 1 :
+      max = 100;
+      break;
+      case 2 :
+      max = 1000;
+      break;
+      case 3 :
+      max = 10000;
+      break;
+      default :
+      max = 100;
+      break;
+    }
+
     rep = 0;
     printf("1. Tout seul ?\n2. A deux ?\n");
     scanf("%d", &mod);
 	switch(mod) {
 	  case 1 :
-    nb = (rand() % (MAX - MIN + 1)) + MIN;
+    nb = (rand() % (max - MIN + 1)) + MIN;
 	  break;
 	  case 2 :
     printf("Entrez le nombre mystère :\n");
     scanf("%d", &nb);
 	  break;
 	  default :
-    nb = (rand() % (MAX - MIN + 1)) + MIN;
+    nb = (rand() % (max - MIN + 1)) + MIN;
 	  break;
 	}
-    i = 0;
+
+      i = 0;
 
     while (rep != nb) {
       printf("Quel est le nombre ?\n");
