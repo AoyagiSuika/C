@@ -28,7 +28,20 @@ int main() {
   srand(time(NULL));
   while (con != 2) {
     rep = 0;
+    printf("1. Tout seul ?\n2. A deux ?\n");
+    scanf("%d", &mod);
+	switch(mod) {
+	  case 1 :
     nb = (rand() % (MAX - MIN + 1)) + MIN;
+	  break;
+	  case 2 :
+    printf("Entrez le nombre mystère :\n");
+    scanf("%d", &nb);
+	  break;
+	  default :
+    nb = (rand() % (MAX - MIN + 1)) + MIN;
+	  break;
+	}
     i = 0;
 
     while (rep != nb) {
