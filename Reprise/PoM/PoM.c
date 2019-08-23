@@ -35,24 +35,24 @@ int main() {
   printf("2. Entre 1 et 1000\n");
   printf("3. Entre 1 et 10000\n");
   scanf("%d", &dif);
-    switch(dif) {
-      case 1 :
-      max = 100;
-      break;
-      case 2 :
-      max = 1000;
-      break;
-      case 3 :
-      max = 10000;
-      break;
-      default :
-      max = 100;
-      break;
-    }
+  switch(dif) {
+    case 1 :
+    max = 100;
+    break;
+    case 2 :
+    max = 1000;
+    break;
+    case 3 :
+    max = 10000;
+    break;
+    default :
+    max = 100;
+    break;
+  }
 
-    rep = 0;
-    printf("1. Tout seul ?\n2. A deux ?\n");
-    scanf("%d", &mod);
+  rep = 0;
+  printf("1. Tout seul ?\n2. A deux ?\n");
+  scanf("%d", &mod);
 	switch(mod) {
 	  case 1 :
     nb = (rand() % (max - MIN + 1)) + MIN;
@@ -66,20 +66,20 @@ int main() {
 	  break;
 	}
 
-      i = 0;
+  i = 0;
 
-    while (rep != nb) {
-      printf("Quel est le nombre ?\n");
-      scanf("%d", &rep);
-      i++;
-      if (rep < nb)
-	      printf("C'est plus !\n");
-      if (rep > nb)
-	      printf("C'est moins !\n");
-	    }
-      printf("En %d coups, GG !\n", i);
-      printf("1. Continuer\n2. Quitter\n");
-      scanf("%d", &con);
-    }
+	while (rep != nb) {
+    printf("Quel est le nombre ?\n");
+    scanf("%d", &rep);
+    i++;
+    if (rep < nb)
+	    printf("C'est plus !\n");
+    if (rep > nb)
+	    printf("C'est moins !\n");
+	  }
+    printf("En %d coups, GG !\n", i);
+    printf("1. Continuer\n2. Quitter\n");
+    scanf("%d", &con);
+  }
   return 0;
 }
