@@ -8,7 +8,7 @@
  * @Last modified time: 23-08-2019
  */
 
-/* Ce petit jeu consiste à deviner un nombre aléatoire comptris entre
+/* Ce petit jeu consiste à deviner un nombre aléatoire compris entre
 ** 1 et 100. A chaque proposition, le jeu vous indique si c'est plus
 ** ou moins, ou si vous avez gagné.
 */
