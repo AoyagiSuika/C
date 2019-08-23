@@ -19,20 +19,30 @@
 
 int main() {
   const int MAX = 100, MIN = 1;
+  int mod = 1;
+  int con = 1;
   int rep = 0;
-  int nb = 0;
+  int nb = 1;
+  int i = 0;
 
   srand(time(NULL));
-  nb = (rand() % (MAX - MIN + 1)) + MIN;
+  while (con != 2) {
+    rep = 0;
+    nb = (rand() % (MAX - MIN + 1)) + MIN;
+    i = 0;
 
     while (rep != nb) {
       printf("Quel est le nombre ?\n");
       scanf("%d", &rep);
+      i++;
       if (rep < nb)
 	      printf("C'est plus !\n");
       if (rep > nb)
 	      printf("C'est moins !\n");
+	    }
+      printf("En %d coups, GG !\n", i);
+      printf("1. Continuer\n2. Quitter\n");
+      scanf("%d", &con);
     }
-  printf("GG !\n");
   return 0;
 }
