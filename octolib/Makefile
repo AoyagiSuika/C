@@ -13,7 +13,7 @@ RM	= @rm -f
 CFLAGS	+= -W -Wall -Wextra -Werror -g -ansi -pedantic
 CFLAGS	+= -I./include
 
-NAME	= ./my/octolib.a
+NAME	= ./my/libocto.a
 
 SRCS	= main.c \
 				str.c

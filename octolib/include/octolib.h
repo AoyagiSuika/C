@@ -17,5 +17,6 @@ char *my_strcpy(char *, const char *);
 char *my_strcat(char *, const char *);
 char *my_strchr(char *, int);
 char *my_strstr(char *, const char *);
+void epur_str(char *, char);
 
 #endif /* !OCTOLIB_H_ */

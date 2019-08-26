@@ -94,3 +94,20 @@ char *my_strstr(char *str, const char *rec) {
   }
   return NULL;
 }
+
+void epur_str(char *str, char sep) {
+  int i = 0;
+  int j = 0;
+
+  for (i = 0; str[i] != 0; i++) {
+    j = 0;
+    if (str[i] == sep)
+      j = i;
+      while (str[j] != 0) {
+        str[j] = str[j + 1];
+        j++;
+      }
+  }
+  printf("epur_str : %s\n", str);
+  return ;
+}
