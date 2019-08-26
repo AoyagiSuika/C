@@ -10,9 +10,8 @@ CC = gcc
 
 RM = rm -f
 
-CFLAGS += -Wextra -Wall -Werror
-CFLAGS += -ansi -pedantic
-CFLAGS += -I.
+CFLAGS += -g -W -Wall -Wextra -Werror -L../lib/my/ -lmy
+CFLAGS += -ansi -pedantic -I./include -I../lib/include -I../include
 
 NAME =
 
@@ -20,14 +19,22 @@ SRCS =
 
 OBJS = $(SRCS:.c=.o)
 
-all: $(NAME)
+all: $(NAME) clean
+
 $(NAME): $(OBJS)
-$(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
+$(CC) $(OBJS) -o $(NAME) $(CFLAGS)
+	@echo "Compiling $(NAME) ..."
+
+lib:
+	@echo "Compiling libmy.a ..."
+	@make --no-print-directory -C lib/my/
 
 clean:
+	@echo "Cleaning object files ..."
 $(RM) $(OBJS)
 
 fclean: clean
+	@echo "Cleaning executable ..."
 $(RM) $(NAME)
 
 re: fclean all

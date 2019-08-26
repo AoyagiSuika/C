@@ -81,7 +81,7 @@ char *my_strstr(char *str, const char *rec) {
     if (str[i] == rec[j])
       k++;
       k = i;
-      while (str[i] == rec[j] && rec[j] != 0 & str[i] != 0) {
+      while ((str[i] == rec[j]) && (rec[j] != 0) & (str[i] != 0)) {
         i++;
         j++;
       }
