@@ -29,6 +29,16 @@ char *my_strcpy(char *dest, const char *src) {
   return dest;
 }
 
+char *my_strncpy(char *dest, const char *src, int n) {
+  int i = 0;
+
+  while (src[i] != 0 && i < n) {
+    dest[i] = src[i];
+    i++;
+  }
+  return dest;
+}
+
 char *my_strcat(char *str1, const char *str2) {
   int i = 0;
   int j = 0;
@@ -110,4 +120,36 @@ void epur_str(char *str, char sep) {
     }
   }
   return ;
+}
+
+int my_str_isupper(char *str) {
+  int i = 0;
+  int res = 0;
+
+  for (i = 0; str[i] != 0; i++) {
+    if (!(str[i] >= 97 && str[i] <= 122)) {
+      res++;
+    }
+  }
+  if (res == i) {
+    return 0;
+  }
+  else
+    return 1;
+}
+
+int my_str_islower(char *str) {
+  int i = 0;
+  int res = 0;
+
+  for (i = 0; str[i] != 0; i++) {
+    if (!(str[i] >= 65 && str[i] <= 90)) {
+      res++;
+    }
+  }
+  if (res == i) {
+    return 0;
+  }
+  else
+    return 1;
 }

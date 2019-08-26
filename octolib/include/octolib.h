@@ -13,7 +13,10 @@
 
 int my_strlen(const char *);
 int my_strcmp(const char *, const char *);
-char *my_strcpy(char *, const char *);
+int my_str_isupper(char *);
+int my_str_islower(char *);
+char *my_strcpy(char *, char*);
+char *my_strncpy(char *, char *, int);
 char *my_strcat(char *, const char *);
 char *my_strchr(char *, int);
 char *my_strstr(char *, const char *);
