@@ -54,6 +54,21 @@ char *my_strcat(char *str1, const char *str2) {
   return str1;
 }
 
+char *my_strncat(char *str1, const char *str2, int n) {
+  int i = 0;
+  int j = 0;
+
+  while (str1[i] != 0) {
+    i++;
+  }
+  do {
+    str1[i] = str2[j];
+    i++;
+    j++;
+  } while (str2[j] != 0 && j < n);
+  return str1;
+}
+
 int my_strcmp(const char *str1, const char *str2) {
   int i = 0;
 
