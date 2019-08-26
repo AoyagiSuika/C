@@ -101,13 +101,13 @@ void epur_str(char *str, char sep) {
 
   for (i = 0; str[i] != 0; i++) {
     j = 0;
-    if (str[i] == sep)
+    for (j = 0; str[i] == sep; j = i) {
       j = i;
       while (str[j] != 0) {
         str[j] = str[j + 1];
         j++;
       }
+    }
   }
-  printf("epur_str : %s\n", str);
   return ;
 }
