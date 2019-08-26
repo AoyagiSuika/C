@@ -1,11 +1,11 @@
 /**
  * @Author: Dahak Déborah <suika>
  * @Date:   23-08-2019
- * @Email:  deborah.dahak@gmail.com
+ * @Email:  dahak.deborah@gmail.com
  * @Project: Reprise
  * @Filename: tableaux.c
  * @Last modified by:   suika
- * @Last modified time: 25-08-2019
+ * @Last modified time: 26-08-2019
  */
 
 #include "tableaux.h"
@@ -50,9 +50,24 @@ void maximumTableau(int tab[], int size, int max) {
   return ;
 }
 
-// void ordonnerTableau(int tab1[], int size) {
-//   int tab2[size] = {0};
-//   int i = 0;
-//
-//   copierTableau(tab1, tab2, size);
-// }
+void ordonnerTableau(int tab1[], int size) {
+  int tab2[size];
+  int min = 0;
+  int max = 0;
+  int i = 0;
+  int j = 1;
+
+  while (j <= size) {
+    for (i = 0; i < size; i++) {
+      if (tab1[max] <= tab1[i])
+        max = i;
+      if (tab1[min] > tab1[i])
+        min = i;
+      }
+      tab2[size - j] = tab1[max];
+      tab1[max] = tab1[min];
+      j++;
+  }
+  copierTableau(tab2, tab1, size);
+  return ;
+}

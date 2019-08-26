@@ -1,11 +1,11 @@
 /**
  * @Author: Dahak Déborah <suika>
  * @Date:   23-08-2019
- * @Email:  deborah.dahak@gmail.com
+ * @Email:  dahak.deborah@gmail.com
  * @Project: Reprise
  * @Filename: PoM_v2.c
  * @Last modified by:   suika
- * @Last modified time: 23-08-2019
+ * @Last modified time: 26-08-2019
  */
 
 /* Ce petit jeu consiste à deviner un nombre aléatoire compris entre
