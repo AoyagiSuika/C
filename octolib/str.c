@@ -83,6 +83,20 @@ int my_strcmp(const char *str1, const char *str2) {
     return 0;
 }
 
+int my_strncmp(const char *str1, const char *str2, int n) {
+  int i = 0;
+
+  while (str1[i] == str2[i] && str1[i] != 0 && str2[i] != 0 && i < (n - 1)) {
+    i++;
+    if (str1[i] != str2[i])
+      return 1;
+  }
+  if (i == 0 && str1[0] != str2[0])
+    return 1;
+  else
+    return 0;
+}
+
 char *my_strchr(char *str, int cha) {
   int i = 0;
 
