@@ -28,6 +28,10 @@ $(NAME):	$(OBJS)
 	@echo "Creating object files..."
 	@echo "Compiling octolib..."
 
+test:
+	$(CC) -o octolib $(SRCS) $(CFLAGS)
+	@echo "Compiling test executable..."
+
 clean:
 	$(RM) $(OBJS)
 	@echo "Removing object files..."
@@ -38,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all octolib clean fclean re
