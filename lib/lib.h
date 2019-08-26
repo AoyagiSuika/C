@@ -8,9 +8,14 @@
  * @Last modified time: 26-08-2019
  */
 
+#ifndef LIB_H_
+#define LIB_H_
+
 int my_strlen(const char *);
 int my_strcmp(const char *, const char *);
 char *my_strcpy(char *, const char *);
 char *my_strcat(char *, const char *);
 char *my_strchr(char *, int);
 char *my_strstr(char *, const char *);
+
+#endif

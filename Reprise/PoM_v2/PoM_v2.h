@@ -8,5 +8,10 @@
  * @Last modified time: 26-08-2019
  */
 
+#ifndef PoM_v2_H_
+#define PoM_v2_H_
+
 int mode();
 int difficulte();
+
+#endif
