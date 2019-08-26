@@ -216,3 +216,19 @@ int my_str_isnum(char *str)
   else
     return (1);
 }
+
+int my_str_isprintable(char *str) {
+  int i = 0;
+  int j = 0;
+
+  while (i < my_strlen(str)) {
+      if ((str[i] >= 32 && str[i] <= 126)) {
+	      j++;
+       }
+      i++;
+    }
+  if (j == my_strlen(str))
+    return (0);
+  else
+    return (1);
+}
