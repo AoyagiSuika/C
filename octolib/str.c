@@ -10,6 +10,10 @@
 
 #include <stdio.h>
 
+/*
+** Fonction qui compte le nombre de caractères dans une chaîne
+*/
+
 int my_strlen(const char *str) {
   int i = 0;
 
@@ -18,6 +22,10 @@ int my_strlen(const char *str) {
   }
   return i;
 }
+
+/*
+** Fonction qui copie src dans dest
+*/
 
 char *my_strcpy(char *dest, const char *src) {
   int i = 0;
@@ -29,6 +37,11 @@ char *my_strcpy(char *dest, const char *src) {
   return dest;
 }
 
+/*
+** Fonction qui copie les n premiers caractères de src dans les
+** n premiers caractères de dest
+*/
+
 char *my_strncpy(char *dest, const char *src, int n) {
   int i = 0;
 
@@ -38,6 +51,10 @@ char *my_strncpy(char *dest, const char *src, int n) {
   }
   return dest;
 }
+
+/*
+** Fonction qui concatène str1 et str2 dans str1
+*/
 
 char *my_strcat(char *str1, const char *str2) {
   int i = 0;
@@ -54,6 +71,11 @@ char *my_strcat(char *str1, const char *str2) {
   return str1;
 }
 
+/*
+** Fonction qui concatène str1 et les n premiers caractères
+** de str2
+*/
+
 char *my_strncat(char *str1, const char *str2, int n) {
   int i = 0;
   int j = 0;
@@ -69,6 +91,11 @@ char *my_strncat(char *str1, const char *str2, int n) {
   return str1;
 }
 
+/*
+** Fonction qui compare str1 à str2 et renvoie 0 si elles
+** sont identiques
+*/
+
 int my_strcmp(const char *str1, const char *str2) {
   int i = 0;
 
@@ -82,6 +109,11 @@ int my_strcmp(const char *str1, const char *str2) {
   else
     return 0;
 }
+
+/*
+** Fonction qui compare les n premiers caractères de str1 et str2
+** et renvoie 0 s'ils sont identiques
+*/
 
 int my_strncmp(const char *str1, const char *str2, int n) {
   int i = 0;
@@ -97,6 +129,11 @@ int my_strncmp(const char *str1, const char *str2, int n) {
     return 0;
 }
 
+/*
+** Fonction qui cherche cha dans str et renvoie l'adresse de sa
+** première occurence ou NULL si elle ne l'a pas trouvé
+*/
+
 char *my_strchr(char *str, int cha) {
   int i = 0;
 
@@ -109,6 +146,11 @@ char *my_strchr(char *str, int cha) {
     return &str[i];
   return NULL;
 }
+
+/*
+** Fonction qui cherche rec dans str et renvoie l'adresse de sa
+** première occurence ou NULL si elle ne l'a pas trouvée
+*/
 
 char *my_strstr(char *str, const char *rec) {
   int i = 0;
@@ -134,6 +176,10 @@ char *my_strstr(char *str, const char *rec) {
   return NULL;
 }
 
+/*
+** Fonction qui retire toutes les occurences de sep dans str
+*/
+
 void epur_str(char *str, char sep) {
   int i = 0;
   int j = 0;
@@ -151,6 +197,10 @@ void epur_str(char *str, char sep) {
   return ;
 }
 
+/*
+** Fonction qui renvoie 0 si str est en majuscules
+*/
+
 int my_str_isupper(char *str) {
   int i = 0;
   int res = 0;
@@ -166,6 +216,10 @@ int my_str_isupper(char *str) {
   else
     return 1;
 }
+
+/*
+** Fonction qui renvoie 0 si str est en minuscule
+*/
 
 int my_str_islower(char *str) {
   int i = 0;
@@ -183,6 +237,10 @@ int my_str_islower(char *str) {
     return 1;
 }
 
+/*
+** Fonction qui renvoie 0 si str est alphanumérique
+*/
+
 int my_str_isalpha(char *str) {
   int i = 0;
   int j = 0;
@@ -198,6 +256,10 @@ int my_str_isalpha(char *str) {
   else
     return (1);
 }
+
+/*
+** Fonction qui renvoie 0 si str est numérique
+*/
 
 int my_str_isnum(char *str)
 {
@@ -216,6 +278,10 @@ int my_str_isnum(char *str)
   else
     return (1);
 }
+
+/*
+** Fonction qui renvoie 0 si str est imprimable
+*/
 
 int my_str_isprintable(char *str) {
   int i = 0;
