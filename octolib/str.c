@@ -182,3 +182,19 @@ int my_str_islower(char *str) {
   else
     return 1;
 }
+
+int my_str_isalpha(char *str) {
+  int i = 0;
+  int j = 0;
+
+  while (i < my_strlen(str)) {
+    if ((str[i] >= 97 && str[i] <= 122) || (str[i] >= 65 && str[i] <= 90) || (str[i] >= 48 && str[i] <= 57)) {
+      j++;
+    }
+    i++;
+    }
+  if (j == my_strlen(str))
+    return (0);
+  else
+    return (1);
+}
