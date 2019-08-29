@@ -5,7 +5,7 @@
  * @Project: Reprise
  * @Filename: lib.h
  * @Last modified by:   suika
- * @Last modified time: 26-08-2019
+ * @Last modified time: 29-08-2019
  */
 
 #ifndef OCTOLIB_H_
@@ -26,5 +26,7 @@ char *my_strncat(char *, const char *, int);
 char *my_strchr(char *, int);
 char *my_strstr(char *, const char *);
 void epur_str(char *, char);
+void my_strupcase(char *);
+void my_strlowcase(char *);
 
 #endif /* !OCTOLIB_H_ */

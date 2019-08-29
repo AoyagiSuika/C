@@ -5,7 +5,7 @@
  * @Project: Reprise
  * @Filename: strlen.c
  * @Last modified by:   suika
- * @Last modified time: 26-08-2019
+ * @Last modified time: 29-08-2019
  */
 
 #include <stdio.h>
@@ -297,4 +297,28 @@ int my_str_isprintable(char *str) {
     return (0);
   else
     return (1);
+}
+
+void my_strupcase(char *str) {
+  int i = 0;
+
+  for (i = 0; i < my_strlen(str); i++) {
+    if (str[i] >= 97 && str[i] <= 122) {
+      str[i] += 32;
+    }
+    i++;
+  }
+  return ;
+}
+
+void my_strlowcase(char *str) {
+  int i = 0;
+
+  for (i = 0; i < my_strlen(str); i++) {
+    if (str[i] >= 65 && str[i] <= 90) {
+      str[i] -= 32;
+    }
+    i++;
+  }
+  return ;
 }
